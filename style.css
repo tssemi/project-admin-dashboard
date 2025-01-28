@@ -5,10 +5,40 @@
 }
 
 body {
+    background-color: #d9d0ff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 3rf;
 }
 
-svg {
-    height: 10px;
+.sidebar {
+    background-color: #9983f8;
+    color: white;
+    padding: 2rem 10rem 0 2rem;
+
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
 }
+
+.sidebar div {
+    display: grid;
+}
+
+.sidebar div div {
+    fill: #ffffff;
+    display: flex;
+}
+
+.header {
+    background-color: #ffffff;
+    grid-row: 1;
+    grid-column: 2 / 4;
+}
+
+.main-content {
+    grid-column: 2 / 4;
+}
+
