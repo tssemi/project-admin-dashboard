@@ -17,19 +17,25 @@ body {
 .sidebar {
     background-color: #9983f8;
     color: white;
-    padding: 2rem 10rem 0 2rem;
-
+    padding: 0 5rem 0 3rem;
     grid-row: 1 / -1;
     grid-column: 1 / 2;
-}
 
-.sidebar div {
     display: grid;
+    grid-template-rows: 0.3fr 0.5fr 1fr;
+    gap: 3rem;
+}
+div[class*="options"] {
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
 }
 
-.sidebar div div {
+.sidebar div div, .sidebar .sidebar-title {
     fill: #ffffff;
     display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .header {
