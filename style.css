@@ -22,6 +22,7 @@ body {
 }
 
 .sidebar {
+    font-size: 1.2em;
     background-color: var(--sidebar-color);
     color: white;
     padding: 0 5rem 0 3rem;
@@ -29,7 +30,7 @@ body {
     grid-column: 1 / 2;
 
     display: grid;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 100px 0.5fr 2fr;
     gap: 3rem;
 }
 div[class*="options"] {
@@ -121,14 +122,26 @@ img {
 }
 
 .main-content {
+    font-size: 15px;
+
     padding: 4rem;
     display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "yr-prs ann"
+    "yr-prs trd"
+    ;
+    gap: 5rem;
+}
+.content-title, .your-projects {
+    font-size: 1.5rem;
 }
 .main-content .your-projects {
-    font-size: 24px;
+    font-size: 1.3em;
+    grid-area: yr-prs;
 }
 .your-projects .projects {
-    
 }
 .projects .project {
     background-color: white;
@@ -147,13 +160,16 @@ img {
     justify-content: end;
     gap: 2rem;
 }
-
-.main-content .announcements, .trending {
-    font-size: 25px;
+.main-content .announcements {
+    grid-area: ann;
 }
-.announcements .announ-conteiner, .trending .trends {
+.main-content .trending {
+    grid-area: trd;
+}
+.announcements, .trending {
+}
+.announcements .announ-container, .trending .trends {
     background-color: white;
-    font-size: 20px;
     padding: 3rem;
     border-radius: 20px;
     display: grid;
